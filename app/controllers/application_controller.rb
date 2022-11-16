@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  layout false
   before_action :set_locale
   
   def set_locale
