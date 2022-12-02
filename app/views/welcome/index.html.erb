@@ -1,14 +1,32 @@
-<h1>Seja Bem-vindo!</h1>
-<p>O idioma usado nessa aplicação é: <strong><%= t('current_locale') %></strong></p>
-<p><strong>Data: </strong><%= I18n.l(Date.today) %> </p>
-<p><%= I18n.t('hello')%></p>
+<!DOCTYPE html>
+<head>
+<title>Crypto Wallet</title>
+    <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag params[:controller], 'data-turbolinks-track': 'reload' %>    
 
-<%= render "menu"%>
+</head>
+<div class="lang-wrapper">
+    <p>
+        <%= link_to 'Português', root_path(locale: 'pt-BR') %>
+    </p>
+    <p>
+        <%= link_to 'Inglês', root_path(locale: 'en')%>
+    </p>
+</div>
+<div class="content-wrapper">
+    <h1>Seja Bem-vindo!</h1>
+    <p>O idioma usado nessa aplicação é: <strong><%= t('current_locale') %></strong></p>
+    <p><strong>Data: </strong><%= I18n.l(Date.today) %> </p>
+    <p><%= I18n.t('hello')%></p>
 
-<p>
-    Você está em ambiente de <strong><%= ambiente_rails %></strong>
-</p>
+    <%= render "menu"%>
 
-<p>
-    Eu sou uma variável de instância/sessão <%= @nome %>
-</p>
+    <p>
+        Você está em ambiente de <strong><%= ambiente_rails %></strong>
+    </p>
+
+    <p>
+        Eu sou uma variável de instância/sessão <%= @nome %>
+    </p>
+</div>
