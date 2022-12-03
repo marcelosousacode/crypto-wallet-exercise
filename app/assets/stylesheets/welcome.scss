@@ -13,13 +13,13 @@ body {
     gap: 30px;
     margin: 0px 30px 0px 30px;
 }
-.lang-wrapper p a, .menu-wrapper a {
+.lang-wrapper p a, .menu-wrapper a, a {
     text-decoration: none;
     color: #181f1c;
     transition: 0.15s all ease;
 }
-.lang-wrapper p a:hover , .menu-wrapper a:hover{
-    color: #fe9920;
+.lang-wrapper p a:hover , .menu-wrapper a:hover, a:hover{
+    color: #fe9920!important;
 }
 
 .content-wrapper {
@@ -37,4 +37,8 @@ body {
 }
 strong {
     color: #fe9920;
+}
+
+.btn:hover {
+    color:  var(--bs-btn-hover-color)!important;
 }
